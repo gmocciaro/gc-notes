@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Getting Started Extension's Popup</title>
+
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <script src="scripts/jquery-3.2.1.min.js"></script>
+        <script src="scripts/md5.js"></script>
+        <script src="scripts/core.js"></script>
+        <script src="scripts/popup.js"></script>
+    </head>
+    <body>
+        <div id="container">
+            <div id="optionIcon"></div>
+            <div id="notificationBox"></div>
+            <div id="topLable">
+                Current url:
+            </div>
+
+            <div id="currentUrlDomainSelector">
+                <input type="radio" name="selector" value="currentUrlDomain">
+            </div>
+            <p id="currentUrlDomain" class="break"></p>
+            <div class="clear"></div>
+
+            <div id="currentUrlSelector">
+                <input type="radio" name="selector" value="currentUrl" checked>
+            </div>
+            <p id="currentUrl" class="break"></p>
+            <div class="clear"></div>
+
+            <div id="view">
+                <div id="status"></div>
+                <button id="edit" class="button">Add\Edit note</button>
+            </div>
+
+            <div id="save">
+                <form>
+                    <div id="legalNote">
+                        <span style="color:red;">DO NOT</span> write personal information/passwords or any other sensible information since this kind of notes are not encrypted!
+                    </div>
+                    <textarea id="newvalue" name="value"></textarea>
+                    <div style="float:left;width:50%;">
+                        <input type="submit" value="Save" class="button" />
+                    </div>
+                    <div style="float:left;width:50%;">
+                        <input type="button" value="Cancel" class="button" id="cancel" />
+                    </div>
+                    <div class="clear"></div>
+                </form>
+            </div>
+        </div>
+        <div id="options">
+            <div id="closeOptionIcon"></div>
+            <div id="topLableOptions">
+                ToS & Credits
+            </div>
+            <div id="optionsText">
+                <ul>
+                    <li>
+                        This service is meant to note information about a specific page (e.g. a date, the minute you stopped a video, etc...)
+                    </li>
+                    <li>
+                        <span style="color:red;">DO NOT</span> write personal information/passwords or any other sensitive information since this kind of notes are not encrypted!
+                    </li>
+                    <li>
+                        The plugin's owner (Guglielmo Mocciaro) will not be responsible for any information leak or any problem related to this plugin if not used in the way is meant to be
+                    </li>
+                </ul>
+            </div>
+            <div id="optionCredits">
+                Made by <b>Guglielmo Mocciaro</b> <br />
+                guglielmomocciaro@gmail.com <br />
+
+            </div>
+        </div>
+    </body>
+</html>
+
