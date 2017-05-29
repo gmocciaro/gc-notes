@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "Gc Notes",
-  "description": "This extension shows a Google Image search result for the current page",
+  "description": "Add personal notes on every internet pages",
   "version": "1.0",
 
   "browser_action": {
