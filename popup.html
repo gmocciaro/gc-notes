@@ -4,15 +4,18 @@
         <title>Getting Started Extension's Popup</title>
 
         <link rel="stylesheet" type="text/css" href="css/main.css" />
-        <script src="scripts/jquery-3.2.1.min.js"></script>
-        <script src="scripts/md5.js"></script>
+        <script src="scripts/vendors/jquery-3.2.1.min.js"></script>
+        <script src="scripts/vendors/md5.js"></script>
+        <script src="scripts/vendors/evolved_tools.js"></script>
+        <script src="scripts/background.js"></script>
         <script src="scripts/core.js"></script>
         <script src="scripts/popup.js"></script>
+        <script src="scripts/history.js"></script>
     </head>
-    <body>
+    <body style="position: relative;">
+        <div id="notificationBox"></div>
         <div id="container">
             <div id="optionIcon"></div>
-            <div id="notificationBox"></div>
             <div id="topLable">
                 Current url:
             </div>
@@ -50,6 +53,7 @@
                 </form>
             </div>
         </div>
+
         <div id="options">
             <div id="closeOptionIcon"></div>
             <div id="topLableOptions">
@@ -58,7 +62,7 @@
             <div id="optionsText">
                 <ul>
                     <li>
-                        This service is meant to note information about a specific page (e.g. a date, the minute you stopped a video, etc...)
+                        This service is meant to note information about a specific page (e.g. a date, a number, the minute you stopped a video, etc...)
                     </li>
                     <li>
                         <span style="color:red;">DO NOT</span> write personal information/passwords or any other sensitive information since this kind of notes are not encrypted!
@@ -68,10 +72,22 @@
                     </li>
                 </ul>
             </div>
+            <button class="button" id="openHistory">My history</button>
             <div id="optionCredits">
                 Made by <b>Guglielmo Mocciaro</b> <br />
                 guglielmomocciaro@gmail.com <br />
-                <a href="https://github.com/gmocciaro/gc-notes">gc-notes github page</a>
+                <a href="https://github.com/gmocciaro/gc-notes" class="bindanchor">gc-notes github page</a>
+            </div>
+        </div>
+
+        <div id="history">
+            <div id="closeHistoryIcon"></div>
+            <a id="deleteAllHistory" href="#">Delete all history</a>
+            <div id="topLableHistory">
+                History
+            </div>
+            <div id="historyContent">
+
             </div>
         </div>
     </body>

@@ -1,3 +1,27 @@
+var URLs;
+var view;
+var save;
+var url;
+var options;
+var selected;
+var container;
+var history;
+
+var phrases = {
+    noText                  : "There is no note stored for this url",
+    noteSaved               : "successfully saved!",
+    historyLinkLabel        : 'URL:',
+    historyNoteLabel        : 'Note:',
+    historyElementDeleted   : 'Element deleted!',
+    noHistory               : 'You don\'t have any record in history',
+    historyWiped            : 'History wiped!'
+};
+
+var storagePrefix = "gcn_";
+var storageSitePrefix = "site_";
+
+var noTextBool = false;
+
 function getUrl(callback){
     var queryInfo = {
         active: true,
@@ -58,15 +82,18 @@ function renderStatus(statusText) {
 }
 
 function getStorage(url, callback){
-    chrome.storage.sync.get(md5(url), function(result){
+    chrome.storage.sync.get(storagePrefix + md5(url), function(result){
         callback(result);
     });
 }
 
 function setStorage(url, value, callback){
     var obj = {};
-    obj[md5(url)] = value;
+    obj[storagePrefix + md5(url)] = value;
+    obj[storagePrefix + storageSitePrefix + md5(url)] = url;
+
     chrome.storage.sync.set(obj, function(result){
+        // Saving the record in the history
         callback(result);
     });
 }

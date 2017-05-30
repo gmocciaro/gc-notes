@@ -12,7 +12,15 @@ body {
     word-break: break-all;
 }
 
-#container, #options {
+.dotted {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#container, #options, #history {
     width: 300px;
     height: auto;
     position:relative;
@@ -22,7 +30,7 @@ body {
     display: none;
 }
 
-#topLable, #topLableOptions {
+#topLable, #topLableOptions, #topLableHistory {
     font-size: 13px;
     font-weight: bold;
     margin-bottom: 5px;
@@ -134,7 +142,7 @@ body {
     cursor: pointer;
 }
 
-#closeOptionIcon {
+#closeOptionIcon, #closeHistoryIcon {
     width: 16px;
     height: 16px;
     position: absolute;
@@ -156,4 +164,85 @@ body {
 #optionCredits {
     font-size: 12px;
     padding-left: 30px;
+}
+
+/* HISTORY */
+#history {
+    display: none;
+}
+
+#openHistory {
+    margin-left: 27px;
+    margin-bottom: 20px;
+}
+
+#historyContent {
+    min-height: 250px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 1px solid #F1F3F5;
+}
+
+.historyElementTitle {
+    padding: 2px 8px;
+    background: #f1f3f5;
+    cursor: pointer;
+    width:256px;
+    float: left;
+}
+
+.historyElementTitle:hover {
+    background: #c5c6c7;
+}
+
+.historyElement {
+    display: none;
+}
+
+.historyElementLink {
+    font-size: 10px;
+}
+
+.historyElementLinkLabel {
+    margin: 5px 0;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.historyElementNoteLabel {
+    margin: 5px 0;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.historyElementNote {
+    margin-bottom: 10px;
+}
+
+.historyElementDelete {
+    width: 26px;
+    float: left;
+    text-align: center;
+    padding-top: 4px;
+    cursor: pointer;
+    background: #F1F3F5;
+}
+
+.historyElementDelete:hover {
+    background: #efc0c0;
+}
+
+#deleteAllHistory {
+    position: absolute;
+    top: 1px;
+    right: 0;
+    color: #ea3f3f;
+    font-size: 12px;
+}
+
+#noHistory {
+    text-align: center;
+    font-size: 15px;
+    margin-top: 20px;
+    color: #808080;
 }

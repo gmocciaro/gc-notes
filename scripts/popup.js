@@ -1,23 +1,9 @@
-var URLs;
-var view;
-var save;
-var url;
-var options;
-var selected;
-var container;
-
-var phrases = {
-    noText      : "There is no note stored for this url",
-    noteSaved   : "successfully saved!"
-};
-
-var noTextBool = false;
-
 jQuery(document).ready(function(){
     view = jQuery("#view");
     save = jQuery("#save");
     options = jQuery('#options');
     container = jQuery('#container');
+    myHistory = jQuery('#history');
 
     selected = "currentUrl";
     // Checking is user change url selection
@@ -27,6 +13,10 @@ jQuery(document).ready(function(){
     });
 
     core();
+
+    //getHistory(function(data){
+    //    console.log(data);
+    //});
 
     // Handling human's interactions
     jQuery('#edit').click(function(){
@@ -56,6 +46,30 @@ jQuery(document).ready(function(){
     jQuery('#closeOptionIcon').click(function(){
         options.hide();
         container.fadeIn();
+
+        renderStorageValue(url);
+    });
+
+    jQuery('#openHistory').click(function(){
+        options.hide();
+        myHistory.fadeIn();
+
+        fetchHistory();
+    });
+
+    jQuery('#closeHistoryIcon').click(function(){
+        myHistory.hide();
+        options.fadeIn();
+
+        clearHistory();
+    });
+
+    jQuery('#deleteAllHistory').click(function(){
+        if(confirm("Are you sure you want to delete all history?")){
+            deleteAllHistory(function(){
+                notification("success", phrases.historyWiped);
+            });
+        }
     });
 });
 
@@ -107,10 +121,10 @@ function renderStorageValue(url){
     view.fadeIn();
 
     getStorage(url, function(data){
-        var renderText = data[md5(url)];
+        var renderText = data[storagePrefix + md5(url)];
         noTextBool = false;
 
-        if (typeof data[md5(url)] == "undefined" || data[md5(url)].length == 0) {
+        if (typeof renderText == "undefined" || renderText.length == 0) {
             renderText = jQuery('<p id="emptyStatus">');
             noTextBool = true;
             renderText.html(phrases.noText);
