@@ -1,9 +1,9 @@
 # gc-notes
 Add personal notes on every internet pages (google chrome plugin)
 
-This plugin will allow you to annotate stuff in every internet pages, so you don't have to remember a specific information when you'll back in the same page (e.g. you have to close a video you're watching? note down the minute you are, so you can read that later and start form there).
+This plugin will allow you to annotate stuff in every internet pages, so you don't have to remember a specific information when you'll back in the same page (e.g. you have to close a video you're watching? Write down the minute you stopped, so you can read that later and start form there).
 
-You can choose to take a note in the specific page you are, or in the whole website, so you will find the note in every page of that specific website. Don't mind to close the browser! The note will stand there, even if you turn off you PC, even after one year (unless you change PC or manually delete the record)!
+You can choose to take a note in the specific page you are visiting, or in the whole website, so you will find the note in every page of that specific website. Don't mind to close the browser! The note will stand there, even if you turn off your PC, even after one year (unless you change PC or manually delete the record)!
 
 You can even use the history section to see all the notes you took, select the ones you want to delete and the ones you want to hold, or just to find a specific note you wrote days ago in a forgotten website
 
