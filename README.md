@@ -11,7 +11,7 @@ You can even use the history section to see all the notes you took, select the o
 
 * This service is meant to note information about a specific page (e.g. a date, a number, the minute you stopped a video, etc...)
 * **DO NOT** write personal information/passwords or any other sensitive information since this kind of notes are not encrypted!
-* The extension's owner (Guglielmo Mocciaro) will not be responsible for any information leak or any issue related to this extension.
+* The extension's owner (Gino Paoli) will not be responsible for any information leak or any issue related to this extension.
 
 ### Acknowledgments
 
