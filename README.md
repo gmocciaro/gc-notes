@@ -18,4 +18,3 @@ You can even use the history section to see all the notes you took, select the o
 * [md5.js](https://www.npmjs.com/package/js-md5)
 * [jQuery](https://jquery.com/)
 * [Evolved Tools](https://github.com/fcroce/evolved_tools)
-* [Emanuele Bargione](https://www.linkedin.com/in/emanuele-bargione-23231b78/)
